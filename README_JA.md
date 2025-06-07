@@ -20,6 +20,72 @@ ZMK Studioのドキュメントに記載されているようにZMK Studioでキ
 
 特定のZMK機能（例：コンボ）を使用するには、マトリックス内の正確なキー位置を知る必要があります。キー位置は、画像とテキスト形式の両方で[こちら](assets/key-positions.md)にあります。
 
+### キーマップ編集
+
+#### VSCodeの準備
+
+VSCodeを使用する際にjsonを自動でフォーマットしないようにする必要があります。
+ワークスペースの.vscode/settings.jsonに以下の設定を追加してください：
+
+```json
+{
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": false,
+        "editor.formatOnType": false
+    }
+}
+```
+
+### 日本語用のキーマップ編集
+
+JIS109キーボードなどinternationalキーボード用に国際的に割り当てられているキーは，ZMKでは以下のように定義されています。
+Advantage 360の日本国内モデルではこれらのインターナショナルキーが最初から設定されています。
+
+#### INT1
+
+Advantage 360には標準で搭載されています。右手親指ブロックにあります。
+
+```c
+_\
+```
+
+#### INT2
+
+Advantage 360には標準で搭載されています。左手親指ブロックにあります。
+
+```c
+カタカナ/ひらがな/ローマ字
+```
+
+#### INT3
+
+Advantage 360には標準で搭載されています。左手薬指の位置にあります。
+
+```c
+\|
+```
+
+#### INT4
+
+Advantage 360には標準で搭載されています。左手親指ブロックにあります。
+
+```c
+変換
+```
+
+#### INT5
+
+Advantage 360には標準で搭載されています。右手親指ブロックにあります。
+
+```c
+無変換
+```
+
 ## GitHub Actionsでのファームウェアビルド
 
 ### セットアップ(Github Actions)
