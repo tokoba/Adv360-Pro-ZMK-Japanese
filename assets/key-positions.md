@@ -1,9 +1,14 @@
 # Advantage 360 Pro key positions
+
 ## Image
+
 ![The key positions on the Advantage 360](key-positions.png)
 
 ## Code
-```
+
+zmk firmware key positions for the Advantage 360 key matrix:
+
+```c
 #define KEYS_L   0  1  2  3  4  5  6 \
                 14 15 16 17 18 19 20 \
                 28 29 30 31 32 33 34 \
@@ -23,4 +28,4 @@
 #define THUMBS_RIGHT 37 38    \
                      53       \
                      68 69 70 \
-                     ```
+```
